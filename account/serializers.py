@@ -7,7 +7,8 @@ class AccountSerializer(serializers.Serializer):
     atype = serializers.CharField(max_length=24)
 
     def create(self, validated_data):
-        return Account.objects.create(**validated_data)
+        pass
+        # return Account.objects.create(**validated_data)
     
     def update(self, instance, validated_data):
         instance.name = validated_data.get('name', instance.name)
