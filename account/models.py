@@ -7,7 +7,7 @@ class Account(models.Model):
     # Will implement default name with 
     name = models.CharField(max_length=100, blank=False, null=True)
     balance = models.DecimalField(max_digits=10, decimal_places=2, default=0)
-    atype = models.CharField(max_length=24, blank=True, null=True)
+    accountType = models.CharField(max_length=24, blank=True, null=True)
     
     class Meta:
         ordering = ('created','name')
